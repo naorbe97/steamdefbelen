@@ -9,19 +9,8 @@ export default defineNuxtConfig({
   ],
   googleFonts: {
     families: {
-      Roboto: true,
-      Inter: [400, 700],
-      'Josefin+Sans': true,
-      Lato: [100, 300],
-      Raleway: {
-        wght: [100, 400],
-        ital: [100]
-      },
-      Inter: '200..700',
-      'Crimson Pro': {
-        wght: '200..900',
-        ital: '200..700',
-      }
+      Roboto: [100, 400, 700], // Incluir pesos 100 (light), 400 (regular) y 700 (bold)
+      'DM+Mono': [400]
     }
   },
   modules: ['@nuxtjs/tailwindcss', 'nuxt-icon', '@nuxtjs/google-fonts'],

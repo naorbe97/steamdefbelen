@@ -4,8 +4,8 @@
             <p>© 2024 Mi Sitio Web</p>
             <nav class="footer-nav">
                 <NuxtLink to="/">Inicio</NuxtLink>
-                <NuxtLink to="/acerca">Acerca de</NuxtLink>
-                <NuxtLink to="/contacto">Contacto</NuxtLink>
+                <NuxtLink to="/soporte">Acerca de</NuxtLink>
+                <NuxtLink to="/soporte">Contacto</NuxtLink>
             </nav>
         </div>
     </footer>
