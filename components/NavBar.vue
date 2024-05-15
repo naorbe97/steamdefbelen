@@ -15,21 +15,26 @@
       <NuxtLink to="/install" class="install-button">Instalar steam</NuxtLink>
     </div>
     <!-- Aquí añadimos el modal -->
-    <LoginModal v-if="showModal" @close="closeModal" />
+    <LoginModal v-if="showModal" @close="closeModal" @openSignupModal="openSignupModal" />
+    <!-- Aquí añadimos el modal de registro -->
+    <SignupModal v-if="showSignupModal" @close="closeSignupModal" />
   </nav>
 </template>
 
 <script>
 import LoginModal from '~/components/LoginModal.vue'; // Importar el componente modal
+import SignupModal from '~/components/SignupModal.vue'; // Importar el componente de registro
 
 export default {
   name: 'Navbar',
   components: {
-    LoginModal
+    LoginModal,
+    SignupModal
   },
   data() {
     return {
-      showModal: false
+      showModal: false,
+      showSignupModal: false
     };
   },
   methods: {
@@ -38,6 +43,12 @@ export default {
     },
     closeModal() {
       this.showModal = false;
+    },
+    openSignupModal() {
+      this.showSignupModal = true;
+    },
+    closeSignupModal() {
+      this.showSignupModal = false;
     }
   }
 }
@@ -66,17 +77,17 @@ export default {
 }
 
 .logo {
-  width: 50px; /* Ajusta el tamaño de la imagen según tu diseño */
+  width: 50px;
 }
 
 .nav-link {
-  color: #000; /* Cambia el color de los enlaces */
+  color: #000;
   text-decoration: none;
   margin-right: 20px;
 }
 
 .nav-link-bold {
-  font-weight: 300; /* Estilo negrita para la ruta activa */
+  font-weight: 300;
 }
 
 .icon-button {
@@ -84,13 +95,13 @@ export default {
   border: none;
   cursor: pointer;
   padding: 5px;
-  color: #000; /* Cambia el color del icono */
+  color: #000;
 }
 
 .install-button {
   background-color: #E6E6E6;
   border-radius: 50px;
-  color: #6C6C6C; /* Texto blanco para el botón de instalar Steam */
+  color: #6C6C6C;
   border: none;
   cursor: pointer;
   padding: 10px 20px;
@@ -98,6 +109,6 @@ export default {
 }
 
 .install-button:hover {
-  background-color: #909090; /* Color azul más oscuro al pasar el ratón */
+  background-color: #909090;
 }
 </style>

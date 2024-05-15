@@ -9,7 +9,7 @@
               <p>{{ slide.subtitle }}</p>
               <div class="buttons">
                 <button class="price-button">{{ slide.price }}</button>
-                <button class="favorite-button">Like</button>
+                <button class="favorite-button"><Icon name="line-md:heart" size="1.5em" color="black"></Icon></button>
               </div>
             </div>
           </div>
@@ -33,9 +33,9 @@
     data() {
       return {
         slides: [
-          { image: '/1.jpg', title: 'Slide 1', subtitle: 'Subtitle 1', price: '$10' },
-          { image: '/2.jpg', title: 'Slide 2', subtitle: 'Subtitle 2', price: '$20' },
-          { image: '/3.jpg', title: 'Slide 3', subtitle: 'Subtitle 3', price: '$30' }
+          { image: '/1.jpg', title: 'Slide 1', subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nunc velit, eleifend malesuada leo vitae, ornare tempus turpis. Cras interdum augue sit amet ipsum mollis, non euismod nibh cursus. Suspendisse malesuada, velit in luctus lobortis, libero metus dictum metus', price: '$10' },
+          { image: '/2.jpg', title: 'Slide 2', subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nunc velit, eleifend malesuada leo vitae, ornare tempus turpis. Cras interdum augue sit amet ipsum mollis, non euismod nibh cursus. Suspendisse malesuada, velit in luctus lobortis, libero metus dictum metus', price: '$20' },
+          { image: '/3.jpg', title: 'Slide 3', subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nunc velit, eleifend malesuada leo vitae, ornare tempus turpis. Cras interdum augue sit amet ipsum mollis, non euismod nibh cursus. Suspendisse malesuada, velit in luctus lobortis, libero metus dictum metus', price: '$30' }
         ]
       };
     }
@@ -64,7 +64,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 20px; /* Ajusta el padding según sea necesario */
+    padding: 70px; /* Ajusta el padding según sea necesario */
   }
   
   .text-container {
@@ -72,8 +72,11 @@
     width: 625px; /* Ancho del cuadro de texto */
     height: 303px; /* Altura del cuadro de texto */
     padding: 20px; /* Ajusta el padding según sea necesario */
+    padding-left: 60px;
+    padding-right: 60px;
     box-sizing: border-box;
     color: white;
+    border-radius: 40px;
   }
   
   h2 {
@@ -89,16 +92,16 @@
   .buttons {
     margin-top: 20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 10px;
   }
   
   .price-button, .favorite-button {
-    width: 90%;
+    width: 20%;
     padding: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 50px;
     cursor: pointer;
     text-align: center;
   }
