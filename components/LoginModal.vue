@@ -50,7 +50,13 @@ export default {
     createAccount() {
       // Implementar la lógica para crear una nueva cuenta
       console.log('Crear cuenta');
+      // Emitir un evento para abrir el modal de registro
+      this.$emit('openSignupModal');
+    },
+    createAccount() {
+      this.$emit('openSignupModal');
     }
+  
   }
 }
 </script>
@@ -66,6 +72,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 999;
 }
 
 .modal-wrapper {

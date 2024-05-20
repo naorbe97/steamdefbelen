@@ -1,7 +1,16 @@
+<!-- pages/index.vue -->
 <template>
-    <div>
-        <p>
-        Home
-      </p>
-    </div>
+  <div>
+    <SwiperComponent />
+  </div>
 </template>
+
+<script>
+import SwiperComponent from '~/components/SwiperComponent.vue';
+
+export default {
+  components: {
+    SwiperComponent
+  }
+};
+</script>
