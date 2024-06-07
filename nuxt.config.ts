@@ -14,9 +14,7 @@ export default defineNuxtConfig({
     }
   },
   modules: ['@nuxtjs/tailwindcss', 'nuxt-icon', '@nuxtjs/google-fonts'],
-  css: [
-    'swiper/swiper-bundle.css'
-  ],
+  css: ["~/main.css"],
   build: {
     transpile: ['swiper']
   }
